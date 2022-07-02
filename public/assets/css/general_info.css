@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+
+#middle_container {
+    width: 100%;
+    margin: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex: wrap;
+    position: relative;
+}
+.single h3::after {
+    content: "";
+    width: 220px;
+    height: 1.7px;
+    background-color: #fab702;
+    position: absolute;
+    top: 35px;
+    left: 110px;
+}
+
+#middle_container .single img {
+    /* width: 50%; */
+    height: 30vh;
+    opacity: 0.5;
+}
+#middle_container .single {
+    /* width: 50%; */
+}
+#middle_container .single .single_des {
+    /* width: 50%; */
+}
