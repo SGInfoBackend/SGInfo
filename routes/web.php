@@ -2,6 +2,8 @@
 
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\JobComponent;
+use App\Http\Livewire\AddJobComponent;
 use App\Http\Livewire\RoomDetailComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', HomeComponent::class)->name('home');
 Route::get('/contact', ContactComponent::class)->name('contact');
+Route::get('/job', JobComponent::class)->name('job');
+Route::get('/addjob', AddJobComponent::class)->name('addjob');
 Route::get('/roomdetail/{Rent_House_ID}', RoomDetailComponent::class)->name('roomdetails');
 // Route::middleware([
 //     'auth:sanctum',

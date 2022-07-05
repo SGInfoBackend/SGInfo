@@ -9,4 +9,9 @@ class Job extends Model
 {
     use HasFactory;
     protected $table = "sg_info_job";
+
+    public function typeofrole()
+    {
+        return $this->hasMany(JobTypeOfRole::class, 'Typeofrole_ID');
+    }
 }

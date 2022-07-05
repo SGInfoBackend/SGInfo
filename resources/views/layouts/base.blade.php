@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('/assets/css/room_detail.css')}}">
     <link rel="stylesheet" href="{{asset('/assets/css/general_info.css')}}">
     <link rel="stylesheet" href="{{asset('/assets/css/contact.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/job.css')}}">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -47,7 +48,7 @@
                             <li><a class="active" href="/">Home</a></li>
                             <li><a href="">Rooms</a></li>
                             <li><a href="">General</a></li>
-                            <li><a href="">Jobs</a></li>
+                            <li><a href="/job">Jobs</a></li>
                             <li><a href="/contact">Meet Us</a></li>
                             <li class="menu-item" >
                                 <a title="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout')}}">Logout</a>
@@ -59,14 +60,22 @@
                             <li><a class="active" href="/">Home</a></li>
                             <li><a href="">Rooms</a></li>
                             <li><a href="">General</a></li>
-                            <li><a href="">Jobs</a></li>
+                            <li><a href="/job">Jobs</a></li>
                             <li><a href="/contact">Meet Us</a></li>
-                            <li><a href="/contact">User</a></li>
                             <li class="menu-item" >
                                 <a title="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout')}}">Logout</a>
                             </li>
                             <form id="logout-form" action="{{ route('logout')}}" method="POST">@csrf</form>
-                            <a href="#" title="My Account">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down"></i></a>
+                            <li title="My Account">
+                                <div class="btn-group">
+                                    <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        My Account ({{Auth::user()->name}})
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li class="drop-down-user"><a class="dropdown-item" style="color: black !important;" href="{{route('addjob')}}">Add Job Post</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li><a href=""><img src="{{asset('assets/images/myanmar.png')}}" alt="" class="logoimg"></a></li>
                         @endif
                 @else
@@ -84,7 +93,6 @@
             <h4>SGINFO</h4>
             <p>Lorem ipsum dolor<br> sit amet consectetur adipisicing<br> elit. Voluptatibus, dignissimos?</p>
         </div>
-
         <div class="col">
             <h4>INFORMATION</h4>
             <a href="#">About us</a>
@@ -93,20 +101,17 @@
             <a href="#">Privacy Policy</a>
             <a href="#">F.A.Q.</a>
         </div>
-
         <div class="col">
             <h4>CATEGORIES</h4>
             <a href="#">Room</a>
             <a href="#">Job</a>
             <a href="#">General</a>
         </div>
-
         <div class="col">
             <h4>CONTACT</h4>
             <p>90 Madison Ave,First Floor New York,NY,10016</p>
             <p>Telephone: 200 256 1855</p>
             <p>Email: mail@yourmail.com</p>
-
             <div class="icon">
                 <i class="uil uil-facebook-f"></i>
                 <i class="uil uil-twitter"></i>
@@ -114,14 +119,10 @@
                 <i class="uil uil-instagram-alt"></i>
                 <i class="uil uil-youtube"></i>
             </div>
-
         </div>
-
         <div class="copyright">
             <p>InMotionLab@2014 | All Rights Reserved</p>
         </div>
-
-
     </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{ asset('assets/js/jobs.js')}}"></script>

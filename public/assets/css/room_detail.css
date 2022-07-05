@@ -1,7 +1,7 @@
 #main{
     margin: 30px;
     /* border: 1px solid black; */
-    height: auto;   
+    height: auto;
     display: flex;
 }
 #left{
@@ -86,7 +86,7 @@
 .review-main{
     margin: 50px 20px 5px 5px;
     border: 1px solid rgb(234, 229, 229);
-    height: auto;   
+    height: auto;
     display: flex;
     padding: 10px 50px;
     border-radius: 10px;
@@ -192,7 +192,7 @@
     background-color: black;
     padding: 20px 20px;
     border-radius: 15px;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
     box-shadow: 10px 10px 40px rgb(199, 192, 192);
 }
 .booking-room label {
